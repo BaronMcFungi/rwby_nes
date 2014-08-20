@@ -40,7 +40,9 @@
     </sprites>
     <sprites name="Enemy">
       <sprites name="Ratling">
-        <sprite>sprites\spr_ratling</sprite>
+        <sprite>sprites\spr_ratling_walk</sprite>
+        <sprite>sprites\spr_ratling_jump</sprite>
+        <sprite>sprites\spr_ratling_slash</sprite>
         <sprite>sprites\spr_debris_ratling</sprite>
       </sprites>
     </sprites>
@@ -96,16 +98,27 @@
   </scripts>
   <objects name="objects">
     <object>objects\SETUP</object>
-    <object>objects\obj_player</object>
-    <object>objects\parent_enemy</object>
-    <object>objects\parent_playerhurt</object>
-    <object>objects\obj_ratling</object>
-    <object>objects\obj_anifx</object>
-    <object>objects\obj_debris</object>
-    <object>objects\obj_playeratkhitbox</object>
-    <object>objects\obj_playersniperbullet</object>
-    <object>objects\parent_terrain</object>
-    <object>objects\obj_terrain_forest1</object>
+    <objects name="Player">
+      <object>objects\obj_player</object>
+      <object>objects\obj_playeratkhitbox</object>
+      <object>objects\obj_playersniperbullet</object>
+    </objects>
+    <objects name="Enemy">
+      <object>objects\obj_ratling</object>
+    </objects>
+    <objects name="Terrain">
+      <object>objects\obj_terrain_forest1</object>
+    </objects>
+    <objects name="Effect">
+      <object>objects\obj_anifx</object>
+      <object>objects\obj_debris</object>
+    </objects>
+    <objects name="Parent">
+      <object>objects\parent_enemy</object>
+      <object>objects\parent_playerhurt</object>
+      <object>objects\parent_terrain</object>
+      <object>objects\parent_damage</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\setup_room</room>
