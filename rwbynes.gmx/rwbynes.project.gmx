@@ -20,20 +20,36 @@
     </sounds>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_ruby_stand</sprite>
-    <sprite>sprites\spr_ruby_walk</sprite>
-    <sprite>sprites\spr_ruby_jump_up</sprite>
-    <sprite>sprites\spr_ruby_jump_down</sprite>
-    <sprite>sprites\spr_ruby_slash1</sprite>
-    <sprite>sprites\spr_ruby_slash2</sprite>
-    <sprite>sprites\spr_ruby_slash3</sprite>
-    <sprite>sprites\spr_ruby_shoot1</sprite>
-    <sprite>sprites\spr_ruby_shoot2</sprite>
-    <sprite>sprites\spr_ruby_dash</sprite>
-    <sprite>sprites\spr_ratling</sprite>
-    <sprite>sprites\spr_debris_ratling</sprite>
-    <sprite>sprites\spr_debrisexplode</sprite>
-    <sprite>sprites\spr_sniperbullet1</sprite>
+    <sprites name="Player">
+      <sprites name="Ruby">
+        <sprite>sprites\spr_ruby_stand</sprite>
+        <sprite>sprites\spr_ruby_walk</sprite>
+        <sprite>sprites\spr_ruby_jump_up</sprite>
+        <sprite>sprites\spr_ruby_jump_down</sprite>
+        <sprite>sprites\spr_ruby_slash1</sprite>
+        <sprite>sprites\spr_ruby_slash2</sprite>
+        <sprite>sprites\spr_ruby_slash3</sprite>
+        <sprite>sprites\spr_ruby_shoot1</sprite>
+        <sprite>sprites\spr_ruby_shoot2</sprite>
+        <sprite>sprites\spr_ruby_dash</sprite>
+      </sprites>
+      <sprites name="Weapons">
+        <sprite>sprites\spr_sniperbullet1</sprite>
+        <sprite>sprites\spr_sniperbulletexplode</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Enemy">
+      <sprites name="Ratling">
+        <sprite>sprites\spr_ratling</sprite>
+        <sprite>sprites\spr_debris_ratling</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Terrain">
+      <sprite>sprites\spr_terrain_forest1</sprite>
+    </sprites>
+    <sprites name="Effect">
+      <sprite>sprites\spr_debrisexplode</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\back_forest_floor</background>
@@ -88,6 +104,8 @@
     <object>objects\obj_debris</object>
     <object>objects\obj_playeratkhitbox</object>
     <object>objects\obj_playersniperbullet</object>
+    <object>objects\parent_terrain</object>
+    <object>objects\obj_terrain_forest1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\setup_room</room>
