@@ -13,15 +13,18 @@ else{
 }
 
 //Land
-if(y >= get_ground_y(x) - 16){
+if(onground){
     state = ps_stand
 }
 
 //Jump height adjustment
-if(!k_j && p_j){
-    if(yspeed < 0){
-        yspeed *= 0.5
+if(!k_j){
+    if(p_j){
+        if(yspeed < 0){
+            yspeed *= 0.5
+        }
     }
+    canjump = true
 }
 
 //Attack

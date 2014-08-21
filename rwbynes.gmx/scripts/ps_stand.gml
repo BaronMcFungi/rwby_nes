@@ -24,11 +24,17 @@ if(!onground){
     state = ps_air
 }
 else{
-    if(k_j && !p_j){
-        yspeed = -jmpspd
-        y     +=  yspeed
-        state  = ps_air
-        sound(snd_jump)
+    if(k_j){
+        if(canjump){
+            yspeed  = -jmpspd
+            y      +=  yspeed
+            state   = ps_air
+            sound(snd_jump)
+            canjump = false
+        }
+    }
+    else{
+        canjump = true
     }
 }
 

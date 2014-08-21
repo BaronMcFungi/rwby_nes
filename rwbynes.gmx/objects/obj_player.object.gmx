@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
-  <maskName>spr_ruby_stand</maskName>
+  <maskName>mask_player</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -47,6 +47,10 @@ tmvelc = 8
 prevatk = NONE
 prevatkt= 0
 shot    = false
+
+canjump = true
+
+masktopdelta = -sprite_get_yoffset(mask_index) + sprite_get_bbox_top(mask_index)
 </string>
           </argument>
         </arguments>
@@ -71,7 +75,7 @@ shot    = false
             <kind>1</kind>
             <string>///Get keys
 get_keys()
-onground = y &gt;= get_ground_y(x) - 16
+onground = terrain_meeting(x,y + 1) || (position_meeting(x,y + 1,parent_jumpthru) &amp;&amp; !place_meeting(x,y,parent_jumpthru))
 </string>
           </argument>
         </arguments>
@@ -129,7 +133,7 @@ if(state == ps_stand || state == ps_air){
 background_x[0] = view_xview[0]*0.6 //Sky
 background_x[1] = view_xview[0]*0.4 //Rear
 background_x[2] = view_xview[0]*0.25 //Ground
-background_x[3] = view_xview[0]*0.1 //Floor
+//background_x[3] = view_xview[0]*0.1 //Floor
 </string>
           </argument>
         </arguments>
@@ -173,5 +177,8 @@ if(file_exists("rwbynes.gm81")){
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>16,47</point>
+    <point>24,24</point>
+  </PhysicsShapePoints>
 </object>

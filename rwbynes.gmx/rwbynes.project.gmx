@@ -20,6 +20,7 @@
     </sounds>
   </sounds>
   <sprites name="sprites">
+    <sprite>sprites\TEMP_comparison</sprite>
     <sprites name="Player">
       <sprites name="Ruby">
         <sprite>sprites\spr_ruby_stand</sprite>
@@ -58,11 +59,14 @@
     </sprites>
     <sprites name="Terrain">
       <sprite>sprites\spr_terrain_forest1</sprite>
+      <sprite>sprites\spr_terrain_forestjumpthru1</sprite>
     </sprites>
     <sprites name="Effect">
       <sprite>sprites\spr_debrisexplode</sprite>
     </sprites>
-    <sprite>sprites\TEMP_comparison</sprite>
+    <sprites name="Collision Masks">
+      <sprite>sprites\mask_player</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\back_forest_floor</background>
@@ -120,6 +124,7 @@
     </objects>
     <objects name="Terrain">
       <object>objects\obj_terrain_forest1</object>
+      <object>objects\obj_jumpthru_forest1</object>
     </objects>
     <objects name="Effect">
       <object>objects\obj_anifx</object>
@@ -130,6 +135,7 @@
       <object>objects\parent_playerhurt</object>
       <object>objects\parent_terrain</object>
       <object>objects\parent_damage</object>
+      <object>objects\parent_jumpthru</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -139,7 +145,7 @@
   <constants number="4">
     <constant name="NONE">-12341</constant>
     <constant name="EARLYPRESS">5</constant>
-    <constant name="GM_build_date">41871.5642807755</constant>
+    <constant name="GM_build_date">41872.6199422569</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

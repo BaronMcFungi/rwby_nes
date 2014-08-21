@@ -11,7 +11,7 @@ if(image_index + image_speed > image_number){
 }
 else if(image_index >= 3){
     if(!shot){
-        n = instance_create(x + image_xscale*16,y + 4,obj_playersniperbullet)
+        n = instance_create(x + image_xscale*16,y - 12,obj_playersniperbullet)
         n.atk       = 20
         n.direction = 90 - image_xscale*90
         sound(snd_shotgun)
