@@ -37,6 +37,9 @@
         <sprite>sprites\spr_sniperbullet1</sprite>
         <sprite>sprites\spr_sniperbulletexplode</sprite>
       </sprites>
+      <sprites name="Weiss">
+        <sprite>sprites\spr_weiss</sprite>
+      </sprites>
     </sprites>
     <sprites name="Enemy">
       <sprites name="Ratling">
@@ -66,6 +69,7 @@
       <script>scripts\get_keys.gml</script>
     </scripts>
     <scripts name="World">
+      <script>scripts\terrain_meeting.gml</script>
       <script>scripts\get_ground_y.gml</script>
     </scripts>
     <scripts name="Player">

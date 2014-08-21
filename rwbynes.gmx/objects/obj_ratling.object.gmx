@@ -30,7 +30,15 @@ event_inherited()
 hp  = 1
 atk = 5
 image_speed = 0.1
-hspeed = -1
+
+state = 0
+
+walkspeed   = 1
+jumpvspeed  = 6
+jumphspeed  = 3
+jumpgravity = 0.2
+
+onground    = true
 </string>
           </argument>
         </arguments>
@@ -53,9 +61,69 @@ hspeed = -1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Animate
-if(hspeed &lt;&gt; 0){
-    image_xscale = sign(hspeed)
+            <string>///Update stuff
+onground = terrain_meeting(x,y + 1)
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///State Machine
+switch(state){
+    case 0://Look for player
+        n = instance_nearest(x,y,obj_player)
+        if(instance_exists(n)){
+            if(n.y &lt; y - 64){
+                state = 2
+                if(x &gt; n.x){
+                    hspeed = -jumphspeed
+                }
+                else{
+                    hspeed = jumphspeed
+                }
+                if(onground){
+                    vspeed = -jumpvspeed
+                }
+            }
+            else{
+                state = 1
+                if(x &gt; n.x){
+                    hspeed = -walkspeed
+                }
+                else{
+                    hspeed = walkspeed
+                }
+            }
+            targetx = n.x
+        }
+    break
+    
+    case 1://Walk towards player
+        if(sign(targetx - x) &lt;&gt; sign(hspeed)){
+            state = 3
+        }
+    break
+    
+    case 2://Jump towards player
+    break
+    
+    case 3:
+    break
 }
 </string>
           </argument>
@@ -99,5 +167,8 @@ sound(snd_explode1)
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>9,0</point>
+    <point>9,9</point>
+  </PhysicsShapePoints>
 </object>
