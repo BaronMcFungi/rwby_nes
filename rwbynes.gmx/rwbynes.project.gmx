@@ -40,6 +40,12 @@
       <sprites name="Weiss">
         <sprite>sprites\spr_weiss_stand</sprite>
       </sprites>
+      <sprites name="Blake">
+        <sprite>sprites\spr_blake_stand</sprite>
+      </sprites>
+      <sprites name="Yang">
+        <sprite>sprites\spr_yang_stand</sprite>
+      </sprites>
     </sprites>
     <sprites name="Enemy">
       <sprites name="Ratling">
@@ -55,6 +61,7 @@
     <sprites name="Effect">
       <sprite>sprites\spr_debrisexplode</sprite>
     </sprites>
+    <sprite>sprites\TEMP_comparison</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_forest_floor</background>
