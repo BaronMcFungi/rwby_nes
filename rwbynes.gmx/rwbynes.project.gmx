@@ -38,7 +38,7 @@
         <sprite>sprites\spr_sniperbulletexplode</sprite>
       </sprites>
       <sprites name="Weiss">
-        <sprite>sprites\spr_weiss</sprite>
+        <sprite>sprites\spr_weiss_stand</sprite>
       </sprites>
     </sprites>
     <sprites name="Enemy">
