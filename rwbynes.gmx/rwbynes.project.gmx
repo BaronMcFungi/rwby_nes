@@ -39,6 +39,7 @@
       </sprites>
       <sprites name="Weiss">
         <sprite>sprites\spr_weiss_stand</sprite>
+        <sprite>sprites\spr_weiss_run</sprite>
       </sprites>
       <sprites name="Blake">
         <sprite>sprites\spr_blake_stand</sprite>
